@@ -13,10 +13,7 @@
 
       .thumbnail
       {
-        width: 300px;
-        display: block;
-        
-        
+        width: 100%;
       }
 
       .search_bar
@@ -30,7 +27,7 @@
         font-size: 14px;
         font-weight: 500;
         line-height: 16px;
-      }
+      }ss
 
      .video_stats1,
      .video_author1
@@ -44,28 +41,25 @@
 
      .video_preview
      {
+      /*
       width: 300px;
       display: inline-block;
       vertical-align: top;
       margin-right: 15px;
+       DONT NEED ANYMORE BECAUSE OF CSS GRID LINE*/
      }
 
-     .channel_picture
-     {
-      display: inline-block;
-      width: 50px;
-      vertical-align: top;
-      
+    
+     
 
-     }
-     
-     .video_info
+     .video_info_grid
      {
-      display: inline-block;
-      width: 200px;
-      
-     
+      display: grid;
+      grid-template-columns: 50px 1fr;
      }
+
+
+    
     
     .pfp1
     {
@@ -77,65 +71,201 @@
     {
       margin-bottom: 12px;
     }
+
+    .video_grid
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr ;
+      column-gap: 16px;
+      row-gap: 40px;
+     
+    }
+
     </style>
     <body>
       <input class="search_bar" type="Search" placeholder="Search"> 
 
+      <div class="video_grid">
 
+        <div class="video_preview"> <!--Is the box container in website-->
+        
+          <div class="thumbnail_row">
+            <img class="thumbnail" src="thumbnails/hq720.webp" >
+          </div>
+         
+          <div class="video_info_grid">
+              
+            <div class="channel_picture">
+                <img class="pfp1" src="thumbnails/pfp1.jpg">
+              </div>
+              
+              <div class="video_info">
+                <p class="video_title1"> Build and Deploy a Fully Responsive Modern UI/UX Website | 
+                  React.js, Next.js 13, Tailwind CSS
+                </p>
+                <p class="video_author1"> JavaScript Mastery</p>
+                <p class="video_stats1"> <strong>3.5M views</strong>  &#183 1 month ago </p>
+              </div>
+            
+            
+          </div>
+  
+          
+        
+          
+  
+        </div>
+  
+        <div class="video_preview"> <!--Is the box container in website-->
+          
+          
+          
+             <div class="thumbnail_row">
+                 <img class="thumbnail" src="thumbnails/2nd.webp" >
+              </div>
+              
+            <div class="video_info_grid">
+              <div class="channel_picture">
+                <img class="pfp1" src="thumbnails/pfp1.jpg">
+              </div>
+          
+          
+                   <div class="video_info">
+                    <p class="video_title1"> What "disappearing for a year" actually looks like  </p>
+                    <p class="video_author1"> Ruff</p>
+                   <p class="video_stats1"> <strong>839,093 views</strong>  &#183 9 month ago </p>
+  
+  
+          </div>
+  
+            </div>
+              
+          
+        </div>
+  
+        <!---------------------------------------------------->
+  
+        
+        <div class="video_preview"> <!--Is the box container in website-->
+          
+          <div class="thumbnail_row">
+            <img class="thumbnail" src="thumbnails/hq720.webp" >
+          </div>
+         
+          <div class="video_info_grid">
+              
+            <div class="channel_picture">
+                <img class="pfp1" src="thumbnails/pfp1.jpg">
+              </div>
+              
+              <div class="video_info">
+                <p class="video_title1"> Build and Deploy a Fully Responsive Modern UI/UX Website | 
+                  React.js, Next.js 13, Tailwind CSS
+                </p>
+                <p class="video_author1"> JavaScript Mastery</p>
+                <p class="video_stats1"> <strong>3.5M views</strong>  &#183 1 month ago </p>
+              </div>
+            
+            
+          </div>
+  
+          
+        
+          
+  
+        </div>
+  
+        <div class="video_preview"> <!--Is the box container in website-->
+          
+          
+          
+             <div class="thumbnail_row">
+                 <img class="thumbnail" src="thumbnails/2nd.webp" >
+              </div>
+              
+            <div class="video_info_grid">
+              <div class="channel_picture">
+                <img class="pfp1" src="thumbnails/pfp1.jpg">
+              </div>
+          
+          
+                   <div class="video_info">
+                    <p class="video_title1"> What "disappearing for a year" actually looks like  </p>
+                    <p class="video_author1"> Ruff</p>
+                   <p class="video_stats1"> <strong>839,093 views</strong>  &#183 9 month ago </p>
+  
+  
+          </div>
+  
+            </div>
+              
+          
+        </div>
+  
+        <!------------------------------------------------------>
+  
+        
+        <div class="video_preview"> <!--Is the box container in website-->
+          
+          <div class="thumbnail_row">
+            <img class="thumbnail" src="thumbnails/hq720.webp" >
+          </div>
+         
+          <div class="video_info_grid">
+              
+            <div class="channel_picture">
+                <img class="pfp1" src="thumbnails/pfp1.jpg">
+              </div>
+              
+              <div class="video_info">
+                <p class="video_title1"> Build and Deploy a Fully Responsive Modern UI/UX Website | 
+                  React.js, Next.js 13, Tailwind CSS
+                </p>
+                <p class="video_author1"> JavaScript Mastery</p>
+                <p class="video_stats1"> <strong>3.5M views</strong>  &#183 1 month ago </p>
+              </div>
+            
+            
+          </div>
+  
+          
+        
+          
+  
+        </div>
+  
+        <div class="video_preview"> <!--Is the box container in website-->
+          
+          
+          
+             <div class="thumbnail_row">
+                 <img class="thumbnail" src="thumbnails/2nd.webp" >
+              </div>
+              
+            <div class="video_info_grid">
+              <div class="channel_picture">
+                <img class="pfp1" src="thumbnails/pfp1.jpg">
+              </div>
+          
+          
+                   <div class="video_info">
+                    <p class="video_title1"> What "disappearing for a year" actually looks like  </p>
+                    <p class="video_author1"> Ruff</p>
+                   <p class="video_stats1"> <strong>839,093 views</strong>  &#183 9 month ago </p>
+  
+  
+          </div>
+  
+            </div>
+              
+          
+        </div>  
+
+
+      </div>
      
 
-      <div class="video_preview"> <!--Is the box container in website-->
-        
-        <div class="thumbnail_row">
-          <img class="thumbnail" src="thumbnails/hq720.webp" >
-        </div>
-       
-        <div>
-            
-          <div class="channel_picture">
-              <img class="pfp1" src="thumbnails/pfp1.jpg">
-            </div>
-            
-            <div class="video_info">
-              <p class="video_title1"> Build and Deploy a Fully Responsive Modern UI/UX Website | 
-                React.js, Next.js 13, Tailwind CSS
-              </p>
-              <p class="video_author1"> JavaScript Mastery</p>
-              <p class="video_stats1"> <strong>3.5M views</strong>  &#183 1 month ago </p>
-            </div>
-          
-          
-        </div>
-
-        
-      
-        
-
-      </div>
-
-      <div class="video_preview"> <!--Is the box container in website-->
-        
-        
-        
-           <div class="thumbnail_row">
-               <img class="thumbnail" src="thumbnails/2nd.webp" >
-            </div>
-            
-            <div class="channel_picture">
-              <img class="pfp1" src="thumbnails/pfp1.jpg">
-            </div>
-        
-        
-                 <div class="video_info">
-                  <p class="video_title1"> What "disappearing for a year" actually looks like  </p>
-                  <p class="video_author1"> Ruff</p>
-                 <p class="video_stats1"> <strong>839,093 views</strong>  &#183 9 month ago </p>
-
-
-        </div>
-        
-      </div>
-
+    
     </body> 
   </head>
 </html>
