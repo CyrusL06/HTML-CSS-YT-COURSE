@@ -30,7 +30,10 @@
 
         body
         {
+          height: 3000px;
           margin: 0;
+          padding-top: 80px;
+          padding-left: 80px;
         }
 
         
@@ -86,10 +89,7 @@
       border-radius: 30px;
     }
 
-    .thumbnail_row
-    {
-      margin-bottom: 12px;
-    }
+    
 
     .video_grid
     {
@@ -100,28 +100,62 @@
      
     }
 
+    .thumbnail_row
+    {
+      margin-bottom: 12px;
+      position: relative; /*POSITION RELATIVE IN ABSOLUTE*/
+    }
+
+    .video_time{
+          font-family: Roboto, Arial;
+          font-size: 12px;
+          font-weight: 400;
+          padding-left: 4px;
+          padding-right: 4px;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          border-radius: 2px;
+          background-color: black;
+          color: white;
+          position:absolute ;
+          bottom: 8px;
+          right: 5px;
+        }
+    
 
 
       /*HEADER CSS*/
 
-         .search_bar
-        {
-          display: block;
-        }
+         
 
         .header{
           height: 55px;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          border-bottom-width: 1px ;
+          border-bottom-style: solid ;
+          border-bottom-color: rgb(142, 142, 142);
+          
+          position: fixed; /*POSITION FIXED FOR TOP HEADER*/
+          top: 0;
+          left: 0;
+          right: 0;
+          background-color: white;
+
+          z-index: 100; /*TO APPEAR AT THE FRONT */
+          
+         
+         
+          
 
         }
 
         .left_section{
-          background-color: lightblue;
-          width: 200px;
-          display: flex;
-          align-items: center;
+            background-color: lightblue;
+            width: 200px;
+            display: flex;
+            align-items: center;
           
         }
 
@@ -131,13 +165,12 @@
           margin-left: 70px;
           margin-right: 35px;
           max-width: 500px;
+          display: flex;
+          align-items: center;
         }
 
-        .right_section{
-          background-color: lightblue;
-          width: 200px;
-          
-        }
+        
+      
 
         .hamburger_menu{
           height: 20px;
@@ -147,8 +180,119 @@
         }
 
         .youtube_logo{
-          height: 20px;
+          height: 20px; 
         }
+
+        .search_btn{
+          height: 40px;
+          width: 66px;
+          background-color: rgb(240,240,240);
+          border-width: 1px;
+          border-style: solid;
+          border-color: rgb(192,192,192);
+          margin-left: -1px;
+          margin-right: 10px;
+        }
+
+        .search{
+          height: 25px;
+          margin-top: 4px;
+        }
+
+        .voice_btn{
+          height: 40px;
+          width: 40px;
+          border-radius: 20px;
+          border: none;
+        }
+
+        .voice{
+          height: 24px;
+          margin-top: 4px;
+          background-color: rgb(248, 248, 248);
+        }
+
+
+        .search_bar{
+          flex: 1; 
+          height: 36px;
+          padding-left: 10px;
+          font-size: 16px;
+          border-width: 1px;
+          border-style: solid;
+          border-color: gray;
+          border-radius: 2px;
+          box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+          width: 0;
+        }
+
+        .search_bar::placeholder{
+          font-family: Roboto, Arial;
+          font-size: 14px;
+          padding-left: 10px;
+        }
+
+        .right_section{
+          background-color: lightblue;
+          width: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-right: 24px;
+          flex-shrink: 0;
+        }
+
+        .upload_icon{
+          height: 24px;
+        }
+
+        .youtube_icon{
+          height: 24px;
+        }
+
+        .notfication_icon{
+          height: 24px;
+        }
+
+        .notfication_icon_container{
+          position: relative;
+        }
+
+        .notification_count{
+
+          background-color: rgb(190, 0, 0);
+          color: white;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          font-family: Roboto, Arial;
+          font-size: 11px;
+          padding-left: 6px;
+          padding-right: 6px;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          border-radius: 10px;
+        }
+
+
+        .current_user{
+          height: 32px;
+          border-radius: 16px;
+         
+        }
+
+        .side_bar{
+          background-color: green;
+                
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                top: 55px;
+                width: 72px;
+        }
+
+
+        
     </style>
     
    </head>
@@ -168,9 +312,35 @@
         <div class="middle_section">
 
           <input class="search_bar" type="Search" placeholder="Search"> 
+          <button class="search_btn">
+            <img class="search" src="icons/search.svg">
+          </button>
+          <button class="voice_btn">
+            <img class="voice" src="icons/voice-search-icon.svg" >
+          </button>
         </div>
-        <div class="right_section"> right section</div>
+
+
+        <div class="right_section">
+          <img class="upload_icon" src="icons/upload.svg">
+          <img class="youtube_icon" src="icons/youtube-apps.svg">
+          
+          <div class="notification_icon_container">
+            <img class="notfication_icon" src="icons/notifications.svg">
+            <div class="notification_count">9</div>
+          </div>
+
+          <img class="current_user" src="thumbnails/pfp1.jpg">
+
+          
+        </div>
         
+        <div class="side_bar">
+
+
+
+        </div>
+
         
       </div>
 
@@ -181,6 +351,8 @@
         
           <div class="thumbnail_row">
             <img class="thumbnail" src="thumbnails/hq720.webp" >
+
+            <div class="video_time">14:20</div>
           </div>
          
           <div class="video_info_grid">
@@ -299,6 +471,9 @@
           
           <div class="thumbnail_row">
             <img class="thumbnail" src="thumbnails/hq720.webp" >
+
+           
+
           </div>
          
           <div class="video_info_grid">
